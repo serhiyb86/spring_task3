@@ -1,0 +1,47 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+    <display-name>Students Web Application</display-name>
+
+    <context-param>
+        <param-name>dbUrl</param-name>
+        <param-value>jdbc:mysql://pupchik.mysql.tools</param-value>
+    </context-param>
+    <context-param>
+        <param-name>dbUser</param-name>
+        <param-value>pupchik_ciklumtask2</param-value>
+    </context-param>
+    <context-param>
+        <param-name>dbPassword</param-name>
+        <param-value>3N~2b-eNj6</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>addStudent</servlet-name>
+        <servlet-class>com.servlet.test.controller.AddStudentServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>addStudent</servlet-name>
+        <url-pattern>/add</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>register</servlet-name>
+        <jsp-file>/add-student.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>register</servlet-name>
+        <url-pattern>/add2</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>allStudents</servlet-name>
+        <servlet-class>com.servlet.test.controller.AllStudentsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>allStudents</servlet-name>
+        <url-pattern>/allStudents</url-pattern>
+    </servlet-mapping>
+</web-app>
