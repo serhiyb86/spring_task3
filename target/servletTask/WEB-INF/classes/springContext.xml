@@ -1,0 +1,41 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="repo" class="com.servlet.test.DAO.StudentRepositoryImpl"/>
+
+    <bean id="service" class="com.servlet.test.service.StudentServiceImpl">
+        <constructor-arg ref="repo"/>
+    </bean>
+    <!--servlets-->
+    <bean id="listStudentServlet" class="com.servlet.test.controller.AllStudentsServlet" name="/allStudents">
+        <property name="studentService" ref="service"/>
+    </bean>
+    <bean id="addStudentServlet" class="com.servlet.test.controller.AddStudentServlet" name="/add">
+        <property name="studentService" ref="service"/>
+    </bean>
+
+    <!--configurer-->
+    <bean class="com.servlet.test.configurer.WebAppInitializer"/>
+
+
+    <bean name="simpleServletHandlerAdapter"
+          class="org.springframework.web.servlet.handler.SimpleServletHandlerAdapter"/>
+
+
+
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+
+        <!-- Тег значення для сеттеру -->
+        <property name="driverClassName" value="org.postgresql.Driver"/>
+        <property name="url" value="jdbc:postgresql://localhost:5432/V-MASTER"/>
+        <property name="username" value="postgres"/>
+        <property name="password" value="postgres"/>
+    </bean>
+
+
+
+
+</beans>

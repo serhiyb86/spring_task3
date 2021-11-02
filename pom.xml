@@ -4,14 +4,21 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.3.3.RELEASE</version>
+    <relativePath/> <!-- lookup parent from repository -->
+  </parent>
+
   <groupId>org.example</groupId>
   <artifactId>servletTask</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>servletTask Maven Webapp</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+<!--  <name>servletTask Maven Webapp</name>-->
+<!--  &lt;!&ndash; FIXME change it to the project's website &ndash;&gt;-->
+<!--  <url>http://www.example.com</url>-->
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -20,6 +27,25 @@
   </properties>
 
   <dependencies>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>jstl</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>
+    </dependency>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -36,6 +62,23 @@
       <artifactId>mysql-connector-java</artifactId>
       <version>8.0.27</version>
     </dependency>
+    <dependency>
+      <groupId> org.apache.cassandra</groupId>
+      <artifactId>cassandra-all</artifactId>
+      <version>0.8.1</version>
+
+      <exclusions>
+        <exclusion>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-log4j12</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>log4j</groupId>
+          <artifactId>log4j</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
 
 
   </dependencies>

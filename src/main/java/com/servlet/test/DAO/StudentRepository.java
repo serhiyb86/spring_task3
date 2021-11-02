@@ -6,5 +6,6 @@ import java.util.List;
 
 public interface StudentRepository {
     List<Student> getAllStudents();
+
     Student addStudent(Student student);
 }

@@ -15,9 +15,9 @@ public class StudentRepositoryImpl implements StudentRepository {
 
     private Connection connection;
 
-    public StudentRepositoryImpl(Connection connection) {
+    public StudentRepositoryImpl() {
+        connection = ConnectToMySQL.getConnection();
 
-        this.connection = connection;
     }
 
     public List<Student> getAllStudents() {
