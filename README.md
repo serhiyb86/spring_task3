@@ -1,5 +1,9 @@
 http://localhost:8080/
 
-I would do a repository for dao layer.
-However, I left this work not done completely.
-I am going to do this in the next task.
+To start application:
+1.Edit Configuration
+2.Add New Configuration
+3.Tomcat Srver
+4.Local
+5.war exploded
+6.clear link to application
