@@ -15,12 +15,7 @@
 <body>
 <h2>List of students</h2>
 
-
-<%--        <c:forEach items="${courses}" var="course" >--%>
-<%--            <p><label for id="${course}" >${course}</label>--%>
-<%--                <input type="radio" name="course" id="${course}" value="${course}"></p>--%>
-
-<%--        </c:forEach>--%>
+<p><a href="/">HOME</a> </p>
 <table>
     <tr>
         <th>ID:</th>
@@ -35,7 +30,7 @@
         <td>${student.firstName}</td>
         <td>${student.lastName}</td>
         <td>${student.age}</td>
-        <td>${student.course}</td>
+        <td>${student.course.name()}</td>
 
     </tr>
 

@@ -1,11 +1,10 @@
 package com.servlet.test.DAO;
 
 import com.servlet.test.model.Student;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.List;
+@Repository
+public interface StudentRepository extends JpaRepository<Student, Integer> {
 
-public interface StudentRepository {
-    List<Student> getAllStudents();
-
-    Student addStudent(Student student);
 }
