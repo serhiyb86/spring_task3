@@ -51,6 +51,6 @@
 
 </form>
 <p></p>
-<p><a href="/add">ADD Student to a particular course.</a> </p>
+<p><a href="add">ADD Student to a particular course.</a> </p>
 </body>
 </html>

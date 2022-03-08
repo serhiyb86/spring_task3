@@ -14,7 +14,7 @@
 </head>
 <body>
 <h2>Enter the new student data and press "ADD"</h2>
-<form action="/add" method="post">
+<form action="add" method="post">
     <label for="firstName"> First name: </label>
     <input name="first" type="text" id="firstName">
     <p></p><label for="lastName">Last name:</label>
@@ -37,6 +37,6 @@
 
 </form>
 <p></p>
-<p><a href="/allStudents">List students</a> </p>
+<p><a href="allStudents">List students</a> </p>
 </body>
 </html>

@@ -22,7 +22,7 @@ public class AddStudentServlet extends HttpServlet {
         logger.debug("Add 'get' student servlet is called!");
         req.setAttribute("courses", Courses.values());
         try {
-            req.getRequestDispatcher("/add-student.jsp").forward(req, resp);
+            req.getRequestDispatcher("add-student.jsp").forward(req, resp);
         } catch (ServletException e) {
             e.printStackTrace();
         }
@@ -43,7 +43,7 @@ public class AddStudentServlet extends HttpServlet {
 
         logger.debug("Student is saved -> " + savedStudent);
 
-        resp.sendRedirect("/allStudents");
+        resp.sendRedirect("allStudents");
     }
 
     public void setStudentService(StudentService studentService) {
